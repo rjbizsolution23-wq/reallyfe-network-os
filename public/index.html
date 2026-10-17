@@ -662,12 +662,12 @@
   </main>
 
   <!-- SHOPPING CART SLIDE-OVER DRAWER -->
-  <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0">
+  <div id="cart-drawer" class="fixed inset-0 z-50 hidden transition-opacity duration-300">
     <!-- Backdrop -->
-    <div onclick="toggleCart()" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm pointer-events-auto"></div>
+    <div onclick="toggleCart()" class="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"></div>
     
     <!-- Drawer Panel -->
-    <div class="absolute inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl p-6 flex flex-col justify-between pointer-events-auto transform translate-x-full transition-transform duration-300" id="cart-panel">
+    <div class="absolute inset-y-0 right-0 max-w-md w-full bg-white shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300" id="cart-panel">
       
       <!-- Drawer Header -->
       <div class="space-y-4">
@@ -872,7 +872,7 @@
       if (!container || !ytEpisodes.length) return;
 
       container.innerHTML = ytEpisodes.slice(0, 8).map(ep => `
-        <div onclick="selectHeroVideo('${ep.id}', '${escapeHtml(ep.title)}', '${ep.duration_formatted}')" class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition cursor-pointer group flex flex-col justify-between">
+        <div data-episode-id="${ep.id}" class="episode-card bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md hover:border-blue-400 transition cursor-pointer group flex flex-col justify-between">
           <div>
             <div class="relative aspect-video bg-black overflow-hidden">
               <img src="assets/youtube/${ep.id}.jpg" onerror="this.src='${ep.thumbnail_url}'" alt="${escapeHtml(ep.title)}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
@@ -887,7 +887,7 @@
             </div>
             <div class="p-4 space-y-1">
               <h4 class="text-xs sm:text-sm font-bold text-slate-900 line-clamp-2 group-hover:text-blue-600 transition">
-                ${ep.title}
+                ${escapeHtml(ep.title)}
               </h4>
               <p class="text-[11px] text-slate-500">RealLyfe Street Starz</p>
             </div>
@@ -899,6 +899,17 @@
           </div>
         </div>
       `).join('');
+
+      container.querySelectorAll('.episode-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const epId = card.getAttribute('data-episode-id');
+          const ep = ytEpisodes.find(x => x.id === epId);
+          if (ep) {
+            selectHeroVideo(ep.id, ep.title, ep.duration_formatted);
+          }
+        });
+      });
 
       lucide.createIcons();
     }
@@ -966,12 +977,18 @@
     function toggleCart() {
       const drawer = document.getElementById('cart-drawer');
       const panel = document.getElementById('cart-panel');
-      if (drawer.classList.contains('opacity-0')) {
-        drawer.classList.remove('opacity-0', 'pointer-events-none');
-        panel.classList.remove('translate-x-full');
+      if (!drawer || !panel) return;
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+        // Small delay so CSS transition triggers
+        requestAnimationFrame(() => {
+          panel.classList.remove('translate-x-full');
+        });
       } else {
-        drawer.classList.add('opacity-0', 'pointer-events-none');
         panel.classList.add('translate-x-full');
+        setTimeout(() => {
+          drawer.classList.add('hidden');
+        }, 300);
       }
     }
 
