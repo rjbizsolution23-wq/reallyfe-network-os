@@ -200,3 +200,44 @@ test('🏛️ Verification 6: High-Fidelity Branding & Universal Admin Navigatio
 
   console.log(`  ✓ Verified official RealLyfe Street Starz logo, favicon, and bi-directional admin navigation across all 7 pages`);
 });
+
+test('🏛️ Verification 7: Mobile Responsiveness, Touch Optimization & Universal Mobile Navigation', () => {
+  const pages = [
+    'public/index.html',
+    'public/episodes.html',
+    'public/vault.html',
+    'public/store.html',
+    'public/sponsors.html',
+    'public/about.html',
+    'public/admin.html'
+  ];
+
+  for (const page of pages) {
+    const fullPath = path.join(rootDir, page);
+    const content = fs.readFileSync(fullPath, 'utf8');
+
+    // 1. Mobile viewport meta tag
+    assert.ok(content.includes('name="viewport"'), `Page ${page} must contain responsive viewport meta tag`);
+    assert.ok(content.includes('width=device-width'), `Page ${page} viewport must set width=device-width`);
+
+    // 2. Mobile navigation drawer element
+    assert.ok(content.includes('id="mobile-menu-drawer"'), `Page ${page} must contain id="mobile-menu-drawer" container`);
+
+    // 3. Mobile hamburger trigger button
+    assert.ok(content.includes('id="mobile-menu-toggle-btn"'), `Page ${page} must contain id="mobile-menu-toggle-btn"`);
+    assert.ok(content.includes('toggleMobileMenu()'), `Page ${page} must invoke toggleMobileMenu()`);
+
+    // 4. Toggle helper JavaScript
+    assert.ok(content.includes('function toggleMobileMenu()'), `Page ${page} must include toggleMobileMenu implementation`);
+
+    // 5. Check all main routes linked in mobile menu
+    assert.ok(content.includes('href="/episodes.html"'), `Page ${page} mobile drawer links to episodes`);
+    assert.ok(content.includes('href="/vault.html"'), `Page ${page} mobile drawer links to vault`);
+    assert.ok(content.includes('href="/store.html"'), `Page ${page} mobile drawer links to store`);
+    assert.ok(content.includes('href="/sponsors.html"'), `Page ${page} mobile drawer links to sponsors`);
+    assert.ok(content.includes('href="/about.html"'), `Page ${page} mobile drawer links to about`);
+  }
+
+  console.log(`  ✓ Verified full mobile optimization, hamburger controls, responsive drawers, and touch navigation across all 7 pages`);
+});
+

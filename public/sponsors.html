@@ -89,6 +89,11 @@
       </nav>
 
       <div class="flex items-center gap-3">
+        <!-- MOBILE HAMBURGER TOGGLE -->
+        <button id="mobile-menu-toggle-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" class="md:hidden p-2 text-slate-700 hover:text-blue-600 hover:bg-slate-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <i data-lucide="menu" id="menu-icon-closed" class="w-6 h-6"></i>
+          <i data-lucide="x" id="menu-icon-opened" class="w-6 h-6 hidden"></i>
+        </button>
         <a href="#booking-desk" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl font-medium text-xs flex items-center gap-2 transition-all shadow-sm">
           <i data-lucide="send" class="w-4 h-4"></i>
           <span>Partner With Us</span>
@@ -97,6 +102,49 @@
         <a href="/admin.html" class="hidden sm:inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold px-3 py-2.5 rounded-xl border border-slate-300 transition" title="Jeff Oyeneye Producer Desk">
           <i data-lucide="layout-dashboard" class="w-3.5 h-3.5 text-blue-600"></i>
           <span>Command Desk</span>
+        </a>
+      </div>
+    </div>
+      <!-- MOBILE NAVIGATION DRAWER -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden border-t border-slate-200 bg-white/98 backdrop-blur-md px-4 py-4 space-y-1.5 shadow-2xl transition-all animate-in fade-in duration-200">
+      <div class="space-y-1">
+        <a href="/index.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 pl-4 font-semibold transition-colors">
+          <i data-lucide="home" class="w-4 h-4 text-slate-500"></i>
+          <span>Home Hub</span>
+        </a>
+        <a href="/episodes.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 pl-4 font-semibold transition-colors">
+          <i data-lucide="video" class="w-4 h-4 text-slate-500"></i>
+          <span>Episodes & Docs (25)</span>
+        </a>
+        <a href="/vault.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 pl-4 font-semibold transition-colors">
+          <i data-lucide="lock" class="w-4 h-4 text-slate-500"></i>
+          <span>The Vault VIP Uncut</span>
+          <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded ml-auto">VIP UNCUT</span>
+        </a>
+        <a href="/store.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 pl-4 font-semibold transition-colors">
+          <i data-lucide="shopping-bag" class="w-4 h-4 text-slate-500"></i>
+          <span>Store / Drops (46)</span>
+        </a>
+        <a href="/sponsors.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm bg-blue-50 text-blue-700 font-bold border-l-4 border-blue-600 pl-3 transition-colors">
+          <i data-lucide="award" class="w-4 h-4 text-slate-500"></i>
+          <span>Sponsorships & Ads</span>
+        </a>
+        <a href="/about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 pl-4 font-semibold transition-colors">
+          <i data-lucide="info" class="w-4 h-4 text-slate-500"></i>
+          <span>About RealLyfe</span>
+        </a>
+        <a href="/admin.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 pl-4 font-semibold transition-colors">
+          <i data-lucide="layout-dashboard" class="w-4 h-4 text-slate-500"></i>
+          <span>Producer Command Desk</span>
+          <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-2 py-0.5 rounded ml-auto">PROD</span>
+        </a>
+      </div>
+      <div class="pt-3 mt-2 border-t border-slate-200/80 grid grid-cols-2 gap-2">
+        <a href="/vault.html" class="inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-600 to-sky-600 text-white font-bold text-xs py-2.5 px-3 rounded-lg shadow-sm">
+          <i data-lucide="key" class="w-3.5 h-3.5"></i> The Vault
+        </a>
+        <a href="/admin.html" class="inline-flex items-center justify-center gap-1.5 bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs py-2.5 px-3 rounded-lg hover:bg-slate-200">
+          <i data-lucide="layout-dashboard" class="w-3.5 h-3.5 text-blue-600"></i> Command Desk
         </a>
       </div>
     </div>
@@ -471,6 +519,26 @@
       lucide.createIcons();
       updateCalculator();
     });
+  
+    // Mobile Drawer Toggle Helper
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-menu-drawer');
+      const iconClosed = document.getElementById('menu-icon-closed');
+      const iconOpened = document.getElementById('menu-icon-opened');
+      if (!drawer) return;
+      const isClosed = drawer.classList.contains('hidden');
+      if (isClosed) {
+        drawer.classList.remove('hidden');
+        if (iconClosed) iconClosed.classList.add('hidden');
+        if (iconOpened) iconOpened.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+        if (iconClosed) iconClosed.classList.remove('hidden');
+        if (iconOpened) iconOpened.classList.add('hidden');
+      }
+      if (window.lucide) { lucide.createIcons(); }
+    }
+
   </script>
 </body>
 </html>
