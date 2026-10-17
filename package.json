@@ -1,0 +1,17 @@
+{
+  "name": "reallyfe-network-os",
+  "version": "1.0.0",
+  "description": "Reallyfe Street Starz Media & Commerce OS - Cloudflare-First Architecture",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test test/verify_system.mjs"
+  },
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

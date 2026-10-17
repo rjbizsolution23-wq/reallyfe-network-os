@@ -1,0 +1,127 @@
+{
+  "brand": {
+    "name": "Reallyfe Street Starz",
+    "parent_network": "RealLyfe Productions LLC",
+    "founder": "Jeff Oyeneye",
+    "subscribers": "1.53M+",
+    "established": "Dallas, TX"
+  },
+  "collections": [
+    {
+      "id": "streetwear_drops",
+      "name": "Limited Edition Streetwear Drops (Batch Manufactured 400 GSM)",
+      "description": "Premium streetwear apparel engineered for high margins, custom fit, and scarcity.",
+      "items": [
+        {
+          "title": "Smack Water Acid Wash Heavyweight Tee (Drop 001)",
+          "category": "Apparel - Tees",
+          "price": 48.0,
+          "cost_to_produce": 11.5,
+          "gross_margin": "76.0%",
+          "fabric": "280 GSM 100% Combed Cotton, Custom Vintage Mineral Wash",
+          "features": [
+            "Hand-distressed hems",
+            "Screenprinted high-density puff ink",
+            "Custom woven neck label"
+          ],
+          "status": "Active Drop"
+        },
+        {
+          "title": "Reallyfe 'Federal Witness' 420 GSM Boxy Hoodie",
+          "category": "Apparel - Hoodies",
+          "price": 88.0,
+          "cost_to_produce": 21.0,
+          "gross_margin": "76.1%",
+          "fabric": "420 GSM Heavyweight French Terry",
+          "features": [
+            "Double-layered hood with no drawstrings",
+            "Embroidered chest badge",
+            "Hidden stash pocket"
+          ],
+          "status": "Upcoming Drop"
+        },
+        {
+          "title": "Reallyfe Street Starz Structured Foam Trucker Cap",
+          "category": "Apparel - Headwear",
+          "price": 38.0,
+          "cost_to_produce": 6.8,
+          "gross_margin": "82.1%",
+          "features": [
+            "3D puff embroidered logo",
+            "Snapback closure",
+            "Custom interior taping"
+          ],
+          "status": "Active Drop"
+        }
+      ]
+    },
+    {
+      "id": "digital_vault",
+      "name": "The RealLyfe Vault\u2122 (Owned Native Recurring Memberships)",
+      "description": "Uncensored, unedited raw interviews and unreleased vault files independent of YouTube.",
+      "items": [
+        {
+          "title": "Vault Access Pass - Monthly",
+          "tier": "Tier 1: Front Row",
+          "billing": "$9.99 / Month Recurring",
+          "features": [
+            "100% Uncut, unbleeped interviews",
+            "48-Hour early access before YouTube release",
+            "Full names & unredacted court case discussions",
+            "Ad-free streamable audio & video"
+          ]
+        },
+        {
+          "title": "Street Starz VIP Insider - Annual",
+          "tier": "Tier 2: VIP Executive",
+          "billing": "$99.00 / Year Recurring (Save 17%)",
+          "features": [
+            "All Tier 1 Vault Access",
+            "Exclusive monthly live stream Q&A with Jeff Oyeneye",
+            "Free Limited Drop Tee shipped upon registration",
+            "Direct guest submission & community voting"
+          ]
+        },
+        {
+          "title": "The Banned Interview Archive (One-Time Digital Vault)",
+          "tier": "Digital Box Set",
+          "billing": "$29.99 One-Time Purchase",
+          "features": [
+            "5 Full-length interviews banned/removed by YouTube guidelines",
+            "Over 12 hours of archival Texas street history",
+            "Instant streaming and offline downloadable MP4s"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "commercial_services",
+      "name": "Media Network & B2B Commercial Services",
+      "description": "High-ticket commercial offerings for brands, artists, and creators.",
+      "items": [
+        {
+          "title": "Official Reallyfe Street Starz In-Studio Interview",
+          "category": "Artist / Creator Promotion",
+          "price": 2500.0,
+          "deliverables": [
+            "60-90 Minute in-studio recorded sit-down with Jeff Oyeneye",
+            "Broadcast to 1.53M+ YouTube subscribers",
+            "10 Viral 9:16 vertical clips distributed across IG & TikTok",
+            "Spotify/Apple podcast audio syndication"
+          ]
+        },
+        {
+          "title": "Enterprise Episode Title Sponsorship Package",
+          "category": "Brand Sponsorship",
+          "price": 7500.0,
+          "deliverables": [
+            "Exclusive presenter of 4 consecutive prime episodes",
+            "60-Second mid-roll host-read integration by Jeff",
+            "Permanent clickable link in top 3 lines of video description",
+            "Dedicated Instagram story and community post feature"
+          ]
+        }
+      ]
+    }
+  ]
+}
