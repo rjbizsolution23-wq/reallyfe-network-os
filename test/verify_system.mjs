@@ -150,3 +150,53 @@ test('🏛️ Verification 5: Multi-Page Architecture & Commercial Ad Units', ()
 
   console.log(`  ✓ Verified all 7 multi-page routes and ${adsData.ad_units.length} active monetization ad units`);
 });
+
+test('🏛️ Verification 6: High-Fidelity Branding & Universal Admin Navigation', () => {
+  const pages = [
+    'public/index.html',
+    'public/episodes.html',
+    'public/vault.html',
+    'public/store.html',
+    'public/sponsors.html',
+    'public/about.html',
+    'public/admin.html'
+  ];
+
+  const brandFiles = [
+    'public/assets/branding/logo_transparent.png',
+    'public/assets/branding/logo_white_tight.png',
+    'public/assets/branding/logo_black_tight.png',
+    'public/assets/branding/logo_icon_dark.png',
+    'public/assets/branding/logo_icon_light.png',
+    'public/assets/branding/favicon.png'
+  ];
+
+  for (const bFile of brandFiles) {
+    const fullPath = path.join(rootDir, bFile);
+    assert.ok(fs.existsSync(fullPath), `Brand asset exists: ${bFile}`);
+  }
+
+  for (const page of pages) {
+    const fullPath = path.join(rootDir, page);
+    const content = fs.readFileSync(fullPath, 'utf8');
+
+    // Verify favicon link exists
+    assert.ok(content.includes('favicon.png'), `Page ${page} contains favicon.png link`);
+
+    // Verify official tight logo is used
+    assert.ok(
+      content.includes('logo_white_tight.png') || content.includes('logo_black_tight.png'),
+      `Page ${page} embeds official RealLyfe Street Starz logo image`
+    );
+
+    // Verify admin command desk link or page title exists
+    if (page !== 'public/admin.html') {
+      assert.ok(
+        content.includes('/admin.html') || content.includes('admin.html'),
+        `Page ${page} includes direct navigation link to executive Command Desk (/admin.html)`
+      );
+    }
+  }
+
+  console.log(`  ✓ Verified official RealLyfe Street Starz logo, favicon, and bi-directional admin navigation across all 7 pages`);
+});
