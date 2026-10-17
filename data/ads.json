@@ -1,0 +1,54 @@
+{
+  "network": "Reallyfe Street Starz Commercial Ad Network",
+  "total_monthly_impressions_est": "18.5M+",
+  "ad_units": [
+    {
+      "id": "ad-legal-01",
+      "slot": "leaderboard",
+      "sponsor": "Dallas Justice Defense Group",
+      "headline": "Texas Criminal Defense & 24/7 Bail Support",
+      "tagline": "Protecting Dallas-Fort Worth for over 15 years. Free initial consultation.",
+      "cta": "Call 214-555-JUSTICE",
+      "url": "https://reallyfestreetstarz.com/sponsor/legal",
+      "badge": "OFFICIAL SPONSOR",
+      "theme": "navy",
+      "category": "Legal & Bail"
+    },
+    {
+      "id": "ad-streetwear-02",
+      "slot": "in_stream_spotlight",
+      "sponsor": "Federal Witness 400 GSM Heavyweight Drop",
+      "headline": "Limited Edition Batch 001 - Only 350 Units Left",
+      "tagline": "280 GSM Mineral Wash Tees & 420 GSM Boxy Hoodies. Custom Dallas Cut & Sew.",
+      "cta": "Shop Drop 001 Now",
+      "url": "/store.html",
+      "badge": "LIMITED DROP",
+      "theme": "amber",
+      "category": "Streetwear"
+    },
+    {
+      "id": "ad-studio-03",
+      "slot": "mid_roll_banner",
+      "sponsor": "RealLyfe In-Studio Sit-Down Interviews",
+      "headline": "Tell Your Story to 1.53M+ Subscribers",
+      "tagline": "Guaranteed full-length documentary feature filmed at our Dallas studio.",
+      "cta": "Book In-Studio Session ($2,500)",
+      "url": "/sponsors.html",
+      "badge": "FEATURED OPPORTUNITY",
+      "theme": "blue",
+      "category": "Media Booking"
+    },
+    {
+      "id": "ad-sticky-04",
+      "slot": "sticky_bottom",
+      "sponsor": "The RealLyfe Vault™ VIP Insider",
+      "headline": "Unlock 3 Banned Interviews YouTube Censored",
+      "tagline": "Join 5,000+ VIP members for 100% uncut audio, early drops & secret court files.",
+      "cta": "Get 48-Hr Early Access ($9.99/mo)",
+      "url": "/vault.html",
+      "badge": "MEMBERS ONLY",
+      "theme": "dark",
+      "category": "Subscription"
+    }
+  ]
+}

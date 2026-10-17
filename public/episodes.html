@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Episodes & Documentaries | Reallyfe Street Starz</title>
+  <meta name="description" content="Watch full uncut street interviews and Dallas documentaries from RealLyfe Productions. 1.53M+ Subscribers. Filter by guest, topic, or street history.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rj: {
+              blue: '#2563eb',
+              sky: '#0ea5e9',
+              deep: '#1e3a8a',
+              navy: '#0f172a',
+              soft: '#f8fafc',
+              border: '#bfdbfe',
+              line: '#e2e8f0',
+              text: '#0f172a',
+              muted: '#475569'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-slate-950 text-white text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-blue-600 text-white tracking-wider uppercase">ARCHIVE</span>
+        <span class="text-slate-300">25 Featured Documentaries Indexed • 400M+ Lifetime Views</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="/vault.html" class="hover:text-sky-400 transition flex items-center gap-1 font-medium">
+          <i data-lucide="lock" class="w-3.5 h-3.5 text-blue-400"></i> Unlock 3 Banned Interviews
+        </a>
+        <span class="hidden md:inline text-slate-700">|</span>
+        <a href="/sponsors.html" class="hover:text-sky-400 transition flex items-center gap-1 font-medium">
+          <i data-lucide="tv" class="w-3.5 h-3.5 text-amber-400"></i> Sponsor An Episode
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEADERBOARD SPONSOR AD UNIT (728x90 Standard) -->
+  <div class="bg-slate-900 border-b border-slate-800 py-2.5 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 border border-blue-900/40 rounded-xl p-3 shadow-inner">
+      <div class="flex items-center gap-3">
+        <span class="text-[9px] font-bold bg-blue-600/30 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded tracking-widest uppercase">SPONSORED</span>
+        <div>
+          <span class="text-xs sm:text-sm font-bold text-white block">Dallas Justice Defense Group | 24/7 Texas Bail & Legal Defense</span>
+          <span class="text-[11px] text-slate-400 block">Protecting Dallas-Fort Worth communities for over 15 years. Free initial confidential review.</span>
+        </div>
+      </div>
+      <a href="tel:2145555878" class="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3.5 py-2 rounded-lg transition whitespace-nowrap shadow-sm">
+        <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+        <span>Call 214-555-JUSTICE</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <img src="assets/branding/logo_transparent.png" alt="Reallyfe Street Starz" class="h-12 w-auto object-contain">
+        <div>
+          <span class="block text-lg font-bold font-heading text-slate-900 tracking-tight leading-none group-hover:text-blue-600 transition">
+            REALLYFE STREET STARZ
+          </span>
+          <span class="text-[11px] font-semibold text-blue-600 tracking-widest uppercase">
+            RealLyfe Productions LLC
+          </span>
+        </div>
+      </a>
+
+      <!-- NAV LINKS -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
+        <a href="/index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="/episodes.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Episodes</a>
+        <a href="/vault.html" class="hover:text-blue-600 transition flex items-center gap-1.5">
+          <span>The Vault</span>
+          <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-1.5 py-0.5 rounded border border-blue-200">VIP</span>
+        </a>
+        <a href="/store.html" class="hover:text-blue-600 transition">Streetwear Drops</a>
+        <a href="/sponsors.html" class="hover:text-blue-600 transition">Sponsors & Ads</a>
+        <a href="/about.html" class="hover:text-blue-600 transition">About Jeff</a>
+      </nav>
+
+      <!-- RIGHT ACTIONS -->
+      <div class="flex items-center gap-3">
+        <a href="/vault.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-lg shadow-sm transition">
+          <i data-lucide="lock" class="w-4 h-4"></i>
+          <span>Join The Vault</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- PAGE HERO -->
+    <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white py-12 px-4 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-3">
+              <i data-lucide="video" class="w-3.5 h-3.5 text-blue-400"></i>
+              <span>OFFICIAL BROADCAST ARCHIVE</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-heading text-white tracking-tight">
+              Dallas Street History & In-Depth Interviews
+            </h1>
+            <p class="text-slate-300 mt-2 max-w-2xl text-sm sm:text-base">
+              Over 25 full-length street documentaries and viral conversations hosted by Jeff Oyeneye. Filter by guest, search keywords, or watch directly in high definition.
+            </p>
+          </div>
+
+          <!-- AUDIENCE STATS PILL -->
+          <div class="flex items-center gap-4 bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+            <div>
+              <span class="block text-2xl font-bold font-heading text-white">1.53M+</span>
+              <span class="text-xs text-slate-400">Subscribers</span>
+            </div>
+            <div class="w-px h-8 bg-slate-800"></div>
+            <div>
+              <span class="block text-2xl font-bold font-heading text-sky-400">400M+</span>
+              <span class="text-xs text-slate-400">Lifetime Views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEARCH AND FILTER BAR -->
+        <div class="mt-8 bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex flex-col md:flex-row items-center gap-4 shadow-xl">
+          <div class="relative w-full md:flex-grow">
+            <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2"></i>
+            <input 
+              type="text" 
+              id="episode-search" 
+              placeholder="Search by guest, title, or topic (e.g. Roper, Jaguar Wright, Dallas, OTF)..." 
+              class="w-full bg-slate-950 border border-slate-700 text-white rounded-xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-blue-500 transition"
+              oninput="filterEpisodes()"
+            >
+          </div>
+          <div class="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
+            <button onclick="setCategory('all')" id="btn-cat-all" class="cat-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-blue-600 text-white whitespace-nowrap transition">All (25)</button>
+            <button onclick="setCategory('viral')" id="btn-cat-viral" class="cat-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Viral Sit-Downs</button>
+            <button onclick="setCategory('dallas')" id="btn-cat-dallas" class="cat-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Dallas History</button>
+            <button onclick="setCategory('court')" id="btn-cat-court" class="cat-btn px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700 whitespace-nowrap transition">Legal & Federal</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINEMA SCREEN SECTION -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6">
+      <div class="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl">
+        
+        <!-- VIDEO PLAYER WRAPPER -->
+        <div class="relative w-full aspect-video bg-black">
+          <iframe 
+            id="active-player" 
+            src="https://www.youtube-nocookie.com/embed/9s4C1M2lWGM?autoplay=0&rel=0&modestbranding=1" 
+            title="Reallyfe Street Starz Broadcast" 
+            class="w-full h-full border-0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+
+          <!-- IN-STREAM SPONSOR BADGE -->
+          <div class="absolute top-4 left-4 z-10 flex items-center gap-2 bg-slate-950/80 backdrop-blur-md border border-slate-700/60 px-3 py-1.5 rounded-lg text-xs text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="font-bold text-white">Presented By:</span>
+            <span class="text-sky-400 font-semibold">The RealLyfe Vault™ VIP Network</span>
+          </div>
+        </div>
+
+        <!-- PLAYER DETAILS BAR -->
+        <div class="p-6 bg-slate-900/90 border-t border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-0.5 rounded uppercase">NOW PLAYING</span>
+              <span id="player-runtime" class="text-xs text-slate-400 font-mono">1:42:15 Full Length</span>
+            </div>
+            <h2 id="player-title" class="text-xl sm:text-2xl font-bold font-heading text-white">
+              VIRAL Dallas Couple Roper & Mookie BREAK SILENCE: The Real Story You Never Heard
+            </h2>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="/vault.html" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
+              <i data-lucide="key" class="w-4 h-4"></i>
+              <span>Watch Uncut In The Vault</span>
+            </a>
+            <a href="https://www.youtube.com/@RealLyfeProductions" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+              <span>Subscribe (1.53M)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IN-FEED MID-ROLL SPONSOR BANNER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
+      <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 rounded-2xl p-6 border border-blue-700/50 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-lg">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-blue-600/30 border border-blue-400/30 flex items-center justify-center text-blue-300">
+            <i data-lucide="megaphone" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <div class="inline-flex items-center gap-2 text-[10px] font-bold bg-blue-400/20 text-blue-300 px-2 py-0.5 rounded tracking-wider uppercase mb-1">
+              ADVERTISING OPPORTUNITY
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold font-heading text-white">Get Your Brand Featured in Front of 1.53M+ Subscribers</h3>
+            <p class="text-slate-300 text-xs sm:text-sm">In-studio sit-down features ($2,500) and title sponsorships ($7,500/mo) available for Q4.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="/sponsors.html" class="bg-white hover:bg-slate-100 text-slate-900 text-xs font-bold px-5 py-3 rounded-xl transition whitespace-nowrap shadow">
+            View Media Kit & Rates
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPISODES GRID -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-2xl font-bold font-heading text-slate-900">
+          All Episodes (<span id="results-count">25</span>)
+        </h3>
+        <span class="text-xs text-slate-500 font-medium">Click any episode to load cinema player</span>
+      </div>
+
+      <div id="episodes-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STICKY BOTTOM SPONSOR BANNER -->
+  <div id="sticky-ad" class="fixed bottom-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-md border-t border-slate-800 py-3 px-4 shadow-2xl transition">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline-flex text-[9px] font-bold bg-blue-600/30 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded tracking-widest uppercase">SPONSORED</span>
+        <p class="text-xs text-slate-200">
+          <strong class="text-white">Federal Witness 400 GSM Drop:</strong> Limited Batch 001 is now active. Only 350 total units produced.
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="/store.html" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition whitespace-nowrap">
+          Shop The Drop
+        </a>
+        <button onclick="document.getElementById('sticky-ad').style.display='none'" class="text-slate-500 hover:text-slate-300 p-1" title="Dismiss">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 text-sm py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <img src="assets/branding/logo_transparent.png" alt="Reallyfe Street Starz" class="h-10 w-auto object-contain mb-3">
+        <p class="text-xs text-slate-400 leading-relaxed">
+          The sovereign home of RealLyfe Productions LLC. 1.53M+ Subscribers. Uncensored urban documentaries, culture, and high-margin drops.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider mb-3">Navigation</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="/index.html" class="hover:text-white transition">Home Hub</a></li>
+          <li><a href="/episodes.html" class="text-blue-400 font-bold">Broadcast Episodes</a></li>
+          <li><a href="/vault.html" class="hover:text-white transition">The RealLyfe Vault™</a></li>
+          <li><a href="/store.html" class="hover:text-white transition">Streetwear Store</a></li>
+          <li><a href="/sponsors.html" class="hover:text-white transition">Sponsors & Rates</a></li>
+          <li><a href="/about.html" class="hover:text-white transition">About Jeff</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider mb-3">Monetization</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="/vault.html" class="hover:text-white transition">VIP Vault ($9.99/mo)</a></li>
+          <li><a href="/store.html" class="hover:text-white transition">Batch Streetwear Drops</a></li>
+          <li><a href="/sponsors.html" class="hover:text-white transition">In-Studio Sit-Downs ($2.5k)</a></li>
+          <li><a href="/sponsors.html" class="hover:text-white transition">Title Sponsorships ($7.5k)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider mb-3">Governance</h4>
+        <p class="text-xs text-slate-500 mb-2">
+          Engineered exclusively by <a href="https://rjbusinesssolutions.org" target="_blank" class="text-blue-400 hover:underline">RJ Business Solutions</a> for RealLyfe Productions LLC.
+        </p>
+        <p class="text-[11px] text-slate-600">
+          © 2026 RealLyfe Productions LLC. Dallas, Texas. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EPISODES DATA & CONTROLLER -->
+  <script>
+    lucide.createIcons();
+
+    let allEpisodes = [];
+    let currentCategory = 'all';
+
+    async function loadEpisodes() {
+      try {
+        const res = await fetch('/data/youtube_catalog.json');
+        allEpisodes = await res.json();
+      } catch (e) {
+        allEpisodes = [];
+      }
+      renderEpisodes(allEpisodes);
+    }
+
+    function renderEpisodes(items) {
+      const container = document.getElementById('episodes-container');
+      const countEl = document.getElementById('results-count');
+      countEl.innerText = items.length;
+
+      if (!items || items.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full py-12 text-center text-slate-500">
+            <i data-lucide="film" class="w-10 h-10 mx-auto text-slate-400 mb-2"></i>
+            <p class="font-bold">No episodes found matching your search.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = items.map((ep, idx) => {
+        const thumb = `assets/youtube/${ep.id}.jpg`;
+        const titleSafe = escapeHtml(ep.title);
+        const duration = ep.duration_string || 'Full Length';
+
+        return `
+          <div onclick="playEpisode('${ep.id}', '${escapeAttr(ep.title)}', '${duration}')" 
+               class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col">
+            <div class="relative aspect-video bg-slate-900 overflow-hidden">
+              <img src="${thumb}" alt="${titleSafe}" onerror="this.src='assets/branding/logo_hero.png'" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-950/20 group-hover:bg-slate-950/40 transition flex items-center justify-center">
+                <div class="w-11 h-11 rounded-full bg-blue-600/90 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                  <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+                </div>
+              </div>
+              <span class="absolute bottom-2 right-2 bg-slate-950/90 text-white text-[11px] font-mono px-2 py-0.5 rounded font-semibold">
+                ${duration}
+              </span>
+            </div>
+            <div class="p-4 flex-grow flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold bg-slate-100 text-slate-700 px-2 py-0.5 rounded uppercase">Episode #${idx + 1}</span>
+                  <span class="text-[10px] font-semibold text-blue-600">Dallas Feature</span>
+                </div>
+                <h4 class="font-bold text-slate-900 text-sm line-clamp-2 leading-snug group-hover:text-blue-600 transition">
+                  ${titleSafe}
+                </h4>
+              </div>
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+                <span>Jeff Oyeneye</span>
+                <span class="text-blue-600 font-bold group-hover:underline">Play Now →</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function playEpisode(id, title, duration) {
+      const player = document.getElementById('active-player');
+      player.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+      document.getElementById('player-title').innerText = title;
+      document.getElementById('player-runtime').innerText = `${duration} Full Length`;
+      window.scrollTo({ top: 400, behavior: 'smooth' });
+    }
+
+    function filterEpisodes() {
+      const query = document.getElementById('episode-search').value.toLowerCase().trim();
+      let filtered = allEpisodes.filter(ep => {
+        const matchesQuery = ep.title.toLowerCase().includes(query);
+        if (currentCategory === 'all') return matchesQuery;
+        if (currentCategory === 'viral') return matchesQuery && (ep.title.toLowerCase().includes('viral') || ep.title.toLowerCase().includes('roper'));
+        if (currentCategory === 'dallas') return matchesQuery && (ep.title.toLowerCase().includes('dallas') || ep.title.toLowerCase().includes('texas'));
+        if (currentCategory === 'court') return matchesQuery && (ep.title.toLowerCase().includes('fbi') || ep.title.toLowerCase().includes('federal') || ep.title.toLowerCase().includes('court') || ep.title.toLowerCase().includes('sentenced'));
+        return matchesQuery;
+      });
+      renderEpisodes(filtered);
+    }
+
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      const activeBtn = document.getElementById(`btn-cat-${cat}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-800', 'text-slate-300');
+        activeBtn.classList.add('bg-blue-600', 'text-white');
+      }
+      filterEpisodes();
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    }
+
+    function escapeAttr(str) {
+      if (!str) return '';
+      return str.replace(/'/g, "\\'").replace(/"/g, "&quot;");
+    }
+
+    loadEpisodes();
+  </script>
+</body>
+</html>

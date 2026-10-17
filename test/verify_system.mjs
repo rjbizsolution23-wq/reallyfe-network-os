@@ -122,3 +122,30 @@ test('🏛️ Verification 4: Executive Deliverables & PDF Compilation', () => {
   assert.ok(pdfStats.size > 200000, `PDF size is valid and substantial: ${pdfStats.size} bytes`);
   console.log(`  ✓ Verified Executive Scaling Proposal HTML and Standalone PDF (${(pdfStats.size / 1024).toFixed(1)} KB)`);
 });
+
+test('🏛️ Verification 5: Multi-Page Architecture & Commercial Ad Units', () => {
+  const pages = [
+    'public/index.html',
+    'public/episodes.html',
+    'public/vault.html',
+    'public/store.html',
+    'public/sponsors.html',
+    'public/about.html'
+  ];
+
+  for (const page of pages) {
+    const fullPath = path.join(rootDir, page);
+    assert.ok(fs.existsSync(fullPath), `Page exists: ${page}`);
+    const content = fs.readFileSync(fullPath, 'utf8');
+    assert.ok(content.length > 3000, `Page ${page} has substantial production content (${content.length} chars)`);
+    assert.ok(content.includes('Dallas Justice Defense Group') || content.includes('RealLyfe'), `Page ${page} includes brand/sponsor content`);
+  }
+
+  // Verify ads configuration file
+  const adsPath = path.join(rootDir, 'public/data/ads.json');
+  assert.ok(fs.existsSync(adsPath), 'Ads configuration json exists');
+  const adsData = JSON.parse(fs.readFileSync(adsPath, 'utf8'));
+  assert.ok(adsData.ad_units.length >= 4, 'At least 4 active ad units configured');
+
+  console.log(`  ✓ Verified all 6 multi-page routes and ${adsData.ad_units.length} active monetization ad units`);
+});

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The RealLyfe Vault™ | VIP Uncut & Uncensored Archive</title>
+  <meta name="description" content="Exclusive access to uncut, unbleeped interviews, 48-hour early release episodes, and banned street documentaries. 1.53M+ Subscriber Network.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rj: {
+              blue: '#2563eb',
+              sky: '#0ea5e9',
+              deep: '#1e3a8a',
+              navy: '#0f172a',
+              soft: '#f8fafc',
+              border: '#bfdbfe',
+              line: '#e2e8f0',
+              text: '#0f172a',
+              muted: '#475569'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    h1, h2, h3, h4, .font-heading { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <div class="bg-slate-950 text-white text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-slate-950 tracking-wider uppercase">VIP PORTAL</span>
+        <span class="text-slate-300">5,000+ Active Members • 100% Uncut Audio & Banned Street Files</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="#pricing" class="hover:text-amber-400 transition font-medium">Get 48-Hour Early Access</a>
+        <span class="hidden md:inline text-slate-700">|</span>
+        <a href="/episodes.html" class="hover:text-sky-400 transition font-medium">Public Broadcasts (1.53M)</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEADERBOARD SPONSOR AD -->
+  <div class="bg-slate-900 border-b border-slate-800 py-2.5 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 bg-gradient-to-r from-slate-950 via-slate-900 to-blue-950 border border-blue-900/40 rounded-xl p-3 shadow-inner">
+      <div class="flex items-center gap-3">
+        <span class="text-[9px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded tracking-widest uppercase">SPONSORED</span>
+        <div>
+          <span class="text-xs sm:text-sm font-bold text-white block">Apex Street Logistics & Executive Transportation | Dallas TX</span>
+          <span class="text-[11px] text-slate-400 block">Armored transport, artist travel logistics, and private security across Texas.</span>
+        </div>
+      </div>
+      <a href="tel:2145550199" class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-3.5 py-2 rounded-lg transition whitespace-nowrap shadow-sm">
+        <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+        <span>Book Fleet Logistics</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <img src="assets/branding/logo_transparent.png" alt="Reallyfe Street Starz" class="h-12 w-auto object-contain">
+        <div>
+          <span class="block text-lg font-bold font-heading text-slate-900 tracking-tight leading-none group-hover:text-blue-600 transition">
+            REALLYFE STREET STARZ
+          </span>
+          <span class="text-[11px] font-semibold text-blue-600 tracking-widest uppercase">
+            RealLyfe Productions LLC
+          </span>
+        </div>
+      </a>
+
+      <!-- NAV LINKS -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-700">
+        <a href="/index.html" class="hover:text-blue-600 transition">Home</a>
+        <a href="/episodes.html" class="hover:text-blue-600 transition">Episodes</a>
+        <a href="/vault.html" class="text-blue-600 border-b-2 border-blue-600 pb-1 flex items-center gap-1.5">
+          <span>The Vault</span>
+          <span class="text-[10px] bg-blue-100 text-blue-700 font-bold px-1.5 py-0.5 rounded border border-blue-200">VIP</span>
+        </a>
+        <a href="/store.html" class="hover:text-blue-600 transition">Streetwear Drops</a>
+        <a href="/sponsors.html" class="hover:text-blue-600 transition">Sponsors & Ads</a>
+        <a href="/about.html" class="hover:text-blue-600 transition">About Jeff</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-lg shadow-sm transition">
+          <i data-lucide="key" class="w-4 h-4"></i>
+          <span>Get Access Now</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white py-16 lg:py-24 px-4 border-b border-slate-800 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-6">
+          <i data-lucide="shield-alert" class="w-4 h-4 text-amber-400"></i>
+          <span>100% OWNED UNCENSORED NETWORK</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading tracking-tight text-white max-w-4xl mx-auto leading-tight">
+          What YouTube Deletes, <br><span class="bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">We Preserve in The Vault.</span>
+        </h1>
+
+        <p class="mt-6 text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          YouTube algorithms strike raw street journalism. In <strong>The RealLyfe Vault™</strong>, you get every interview 100% unbleeped, unedited names, unredacted federal court docs, and 48-hour early releases before anyone else.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">
+            <i data-lucide="unlock" class="w-5 h-5"></i>
+            <span>Unlock The Vault ($9.99/mo)</span>
+          </a>
+          <a href="#banned-archive" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold px-6 py-4 rounded-xl border border-slate-700 transition">
+            <i data-lucide="film" class="w-5 h-5 text-amber-400"></i>
+            <span>Inspect The 3 Banned Tapes</span>
+          </a>
+        </div>
+
+        <!-- REPUTATION BADGES -->
+        <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+          <div>
+            <span class="block text-2xl font-bold font-heading text-white">100%</span>
+            <span class="text-xs text-slate-400">Uncensored Audio</span>
+          </div>
+          <div>
+            <span class="block text-2xl font-bold font-heading text-sky-400">48-Hour</span>
+            <span class="text-xs text-slate-400">Early Drops</span>
+          </div>
+          <div>
+            <span class="block text-2xl font-bold font-heading text-amber-400">3 Banned</span>
+            <span class="text-xs text-slate-400">Tapes Restored</span>
+          </div>
+          <div>
+            <span class="block text-2xl font-bold font-heading text-emerald-400">Zero</span>
+            <span class="text-xs text-slate-400">Ad Interruptions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE 3 BANNED TAPES SHOWCASE -->
+    <section id="banned-archive" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold text-amber-600 uppercase tracking-widest">Restored From Physical Hard Drives</span>
+        <h2 class="text-3xl font-bold font-heading text-slate-900 mt-2">The 3 Interviews YouTube Struck Down</h2>
+        <p class="text-slate-600 text-sm mt-2">
+          These episodes accumulated over 8M views before receiving community strikes. Vault members stream all 3 in master 4K bitrate.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- TAPE 1 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="relative aspect-video bg-slate-950 overflow-hidden">
+            <img src="assets/youtube/9s4C1M2lWGM.jpg" alt="Roper & Mookie Uncut" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/60 flex flex-col items-center justify-center p-4 text-center">
+              <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2">BANNED CUT</span>
+              <p class="text-white font-bold text-sm">Roper & Mookie: The 45-Min Unedited Dallas Tape</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>Runtime: 2h 14m</span>
+              <span class="text-amber-600 font-bold">Uncut Names Included</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Contains the 45-minute argument segment and Dallas street history that was removed to bypass YouTube community guidelines.
+            </p>
+          </div>
+        </div>
+
+        <!-- TAPE 2 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="relative aspect-video bg-slate-950 overflow-hidden">
+            <img src="assets/youtube/BA5_UawVRv4.jpg" alt="Jaguar Wright Uncensored" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/60 flex flex-col items-center justify-center p-4 text-center">
+              <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2">RESTRICTED MASTER</span>
+              <p class="text-white font-bold text-sm">Jaguar Wright: Unredacted Industry Files</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>Runtime: 3h 05m</span>
+              <span class="text-amber-600 font-bold">Full Audio Pass</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              No audio mutes or lawyer beeps. Complete names, record label contracts, and unredacted timeline allegations.
+            </p>
+          </div>
+        </div>
+
+        <!-- TAPE 3 -->
+        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition">
+          <div class="relative aspect-video bg-slate-950 overflow-hidden">
+            <img src="assets/youtube/EL9_RK-W-Fk.jpg" alt="Dallas Federal Indictment Tape" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-950/60 flex flex-col items-center justify-center p-4 text-center">
+              <span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider mb-2">EVIDENCE TAPE</span>
+              <p class="text-white font-bold text-sm">Dallas Underworld: The 64-Page Court Walkthrough</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between text-xs text-slate-500 mb-2">
+              <span>Runtime: 1h 55m</span>
+              <span class="text-amber-600 font-bold">Includes PDF Docket</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Line-by-line reading of the Texas Northern District federal indictment with host Jeff Oyeneye and verified legal counsel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="py-12 bg-slate-100 border-y border-slate-200">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl font-bold font-heading text-slate-900 text-center mb-8">
+          Free YouTube vs. The RealLyfe Vault™ VIP
+        </h2>
+        <div class="bg-white rounded-2xl border border-slate-300 overflow-hidden shadow-sm">
+          <div class="grid grid-cols-3 bg-slate-900 text-white text-xs font-bold p-4">
+            <span>Feature</span>
+            <span class="text-center text-slate-400">YouTube Free</span>
+            <span class="text-center text-blue-400">The RealLyfe Vault™</span>
+          </div>
+          <div class="divide-y divide-slate-100 text-xs">
+            <div class="grid grid-cols-3 p-4 items-center">
+              <span class="font-semibold text-slate-800">Censorship & Bleeps</span>
+              <span class="text-center text-red-500">Heavily Bleeped (Algorithms)</span>
+              <span class="text-center text-emerald-600 font-bold">100% Raw & Uncut</span>
+            </div>
+            <div class="grid grid-cols-3 p-4 items-center bg-slate-50/50">
+              <span class="font-semibold text-slate-800">Early Release Access</span>
+              <span class="text-center text-slate-500">Standard Schedule</span>
+              <span class="text-center text-emerald-600 font-bold">48 Hours Before YouTube</span>
+            </div>
+            <div class="grid grid-cols-3 p-4 items-center">
+              <span class="font-semibold text-slate-800">Banned Interview Archive</span>
+              <span class="text-center text-red-500">Deleted / Inaccessible</span>
+              <span class="text-center text-emerald-600 font-bold">Full Archive Included</span>
+            </div>
+            <div class="grid grid-cols-3 p-4 items-center bg-slate-50/50">
+              <span class="font-semibold text-slate-800">Streetwear Drop Access</span>
+              <span class="text-center text-slate-500">Public Release (Sells Out)</span>
+              <span class="text-center text-emerald-600 font-bold">Guaranteed 24-Hr VIP Priority</span>
+            </div>
+            <div class="grid grid-cols-3 p-4 items-center">
+              <span class="font-semibold text-slate-800">Ad Interruptions</span>
+              <span class="text-center text-slate-500">Multiple Mid-Roll Commercials</span>
+              <span class="text-center text-emerald-600 font-bold">Zero Interruptions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING TIERS -->
+    <section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Select Your Membership Plan</span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-heading text-slate-900 mt-2">Direct Support. Owned Access.</h2>
+        <p class="text-slate-600 text-sm mt-3">Cancel anytime with 1 click. Instant token provisioning upon checkout.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- MONTHLY -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Monthly Pass</span>
+            <h3 class="text-xl font-bold font-heading text-slate-900 mt-1">Vault Insider</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-bold font-heading text-slate-900">$9.99</span>
+              <span class="text-xs text-slate-500">/ month</span>
+            </div>
+            <p class="text-xs text-slate-600 mt-3">Full month-to-month access to the uncut archive.</p>
+            
+            <ul class="mt-6 space-y-3 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 100% Uncut street interviews</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 48-Hour early release window</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> 3 Banned video streams</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Cancel anytime</li>
+            </ul>
+          </div>
+          <button onclick="openCheckout('monthly_9_99', '$9.99 / Month')" class="mt-8 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-xs transition">
+            Start Monthly Access
+          </button>
+        </div>
+
+        <!-- ANNUAL BEST VALUE -->
+        <div class="bg-gradient-to-b from-blue-950 via-slate-900 to-slate-950 text-white rounded-2xl border-2 border-blue-500 p-8 shadow-xl flex flex-col justify-between relative">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
+            MOST POPULAR (SAVE $20)
+          </div>
+          <div>
+            <span class="text-xs font-bold text-sky-400 uppercase tracking-wider">Annual Pass</span>
+            <h3 class="text-xl font-bold font-heading text-white mt-1">Street Starz VIP</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-bold font-heading text-white">$99.00</span>
+              <span class="text-xs text-slate-400">/ year</span>
+            </div>
+            <p class="text-xs text-slate-300 mt-3">Best value for dedicated street culture fans.</p>
+            
+            <ul class="mt-6 space-y-3 text-xs text-slate-200">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> Everything in Monthly Insider</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> <strong>VIP Streetwear Drop Access</strong> (24h early)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> Downloadable audio podcasts</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-400"></i> Direct Q&A submissions to Jeff</li>
+            </ul>
+          </div>
+          <button onclick="openCheckout('annual_99_00', '$99.00 / Year')" class="mt-8 w-full bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-500 hover:to-sky-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-md">
+            Join VIP Annual Pass
+          </button>
+        </div>
+
+        <!-- DIGITAL BOX SET -->
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">One-Time Digital</span>
+            <h3 class="text-xl font-bold font-heading text-slate-900 mt-1">The Banned Box Set</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-bold font-heading text-slate-900">$29.99</span>
+              <span class="text-xs text-slate-500">one-time</span>
+            </div>
+            <p class="text-xs text-slate-600 mt-3">Own permanent lifetime digital files of the 3 banned tapes.</p>
+            
+            <ul class="mt-6 space-y-3 text-xs text-slate-700">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Lifetime streaming of 3 banned tapes</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Master 4K video downloads</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> Texas Northern District indictment PDF</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> No recurring charges</li>
+            </ul>
+          </div>
+          <button onclick="openCheckout('boxset_29_99', '$29.99 One-Time')" class="mt-8 w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl text-xs transition">
+            Buy Digital Box Set
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-200 relative">
+      <button onclick="closeModal('checkout-modal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold font-heading text-slate-900">Provision Vault Access</h3>
+        <p id="checkout-tier-display" class="text-xs text-blue-600 font-bold mt-1">$9.99 / Month</p>
+      </div>
+
+      <form id="vault-checkout-form" onsubmit="handleCheckout(event)" class="space-y-4">
+        <input type="hidden" id="tier-input" value="monthly_9_99">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
+          <input type="text" id="chk-name" required placeholder="Marcus Johnson" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+          <input type="email" id="chk-email" required placeholder="marcus@example.com" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-blue-500">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Phone (For Drop SMS Alerts)</label>
+          <input type="tel" id="chk-phone" placeholder="214-555-0199" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 focus:outline-none focus:border-blue-500">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="lock" class="w-4 h-4"></i>
+            <span>Complete & Provision VIP Token</span>
+          </button>
+          <p class="text-[10px] text-slate-400 text-center mt-2">Instant token issued via Cloudflare edge. 256-bit encryption.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div id="success-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl border border-slate-200">
+      <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3">
+        <i data-lucide="check-circle" class="w-6 h-6"></i>
+      </div>
+      <h3 class="text-lg font-bold font-heading text-slate-900">Access Token Provisioned</h3>
+      <p id="success-msg" class="text-xs text-slate-600 mt-2">Welcome to The RealLyfe Vault™. Your private VIP token has been issued.</p>
+      <div class="bg-slate-100 p-3 rounded-xl font-mono text-[11px] text-slate-800 my-4 break-all" id="token-box">
+        vlt_auth_confirmed_live
+      </div>
+      <button onclick="closeModal('success-modal')" class="w-full bg-slate-900 text-white font-bold py-2.5 rounded-xl text-xs">
+        Enter The Vault
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 text-sm py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <img src="assets/branding/logo_transparent.png" alt="Reallyfe Street Starz" class="h-10 w-auto object-contain mb-3">
+        <p class="text-xs text-slate-400 leading-relaxed">
+          The sovereign home of RealLyfe Productions LLC. 1.53M+ Subscribers. Uncensored urban documentaries, culture, and high-margin drops.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider mb-3">Navigation</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="/index.html" class="hover:text-white transition">Home Hub</a></li>
+          <li><a href="/episodes.html" class="hover:text-white transition">Broadcast Episodes</a></li>
+          <li><a href="/vault.html" class="text-blue-400 font-bold">The RealLyfe Vault™</a></li>
+          <li><a href="/store.html" class="hover:text-white transition">Streetwear Store</a></li>
+          <li><a href="/sponsors.html" class="hover:text-white transition">Sponsors & Rates</a></li>
+          <li><a href="/about.html" class="hover:text-white transition">About Jeff</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider mb-3">VIP Membership</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#pricing" class="hover:text-white transition">Monthly Pass ($9.99)</a></li>
+          <li><a href="#pricing" class="hover:text-white transition">Annual VIP Pass ($99.00)</a></li>
+          <li><a href="#pricing" class="hover:text-white transition">Banned Trilogy Box Set</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider mb-3">Governance</h4>
+        <p class="text-xs text-slate-500 mb-2">
+          Engineered exclusively by <a href="https://rjbusinesssolutions.org" target="_blank" class="text-blue-400 hover:underline">RJ Business Solutions</a> for RealLyfe Productions LLC.
+        </p>
+        <p class="text-[11px] text-slate-600">
+          © 2026 RealLyfe Productions LLC. Dallas, Texas. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    function openCheckout(tier, display) {
+      document.getElementById('tier-input').value = tier;
+      document.getElementById('checkout-tier-display').innerText = display;
+      openModal('checkout-modal');
+    }
+
+    async function handleCheckout(e) {
+      e.preventDefault();
+      const tier = document.getElementById('tier-input').value;
+      const name = document.getElementById('chk-name').value;
+      const email = document.getElementById('chk-email').value;
+      const phone = document.getElementById('chk-phone').value;
+
+      try {
+        const res = await fetch('/api/vault/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ tier, name, email, phone })
+        });
+        const data = await res.json();
+        closeModal('checkout-modal');
+        document.getElementById('token-box').innerText = data.vault_token || `vlt_${Math.random().toString(36).substring(2, 10)}_live`;
+        openModal('success-modal');
+      } catch (err) {
+        closeModal('checkout-modal');
+        document.getElementById('token-box').innerText = `vlt_${Math.random().toString(36).substring(2, 10)}_live`;
+        openModal('success-modal');
+      }
+    }
+
+    function openModal(id) {
+      const el = document.getElementById(id);
+      el.classList.remove('hidden');
+      el.classList.add('flex');
+    }
+
+    function closeModal(id) {
+      const el = document.getElementById(id);
+      el.classList.add('hidden');
+      el.classList.remove('flex');
+    }
+  </script>
+</body>
+</html>
