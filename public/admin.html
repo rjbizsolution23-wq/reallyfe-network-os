@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Admin & Monetization Command Desk | Reallyfe Street Starz</title>
+  <meta name="description" content="Operational executive dashboard for Jeff Oyeneye and RealLyfe Productions. Monitor Vault MRR, $2,500 studio bookings, ad inventory, and catalog logistics.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rj: {
+              blue: '#2563eb',
+              sky: '#0ea5e9',
+              deep: '#1e3a8a',
+              navy: '#0f172a',
+              soft: '#f8fafc',
+              border: '#bfdbfe',
+              line: '#e2e8f0',
+              text: '#0f172a',
+              muted: '#475569'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 font-sans antialiased min-h-screen flex flex-col selection:bg-blue-600 selection:text-white">
+
+  <!-- ADMIN TOP HEADER -->
+  <header class="bg-[#0f172a] text-white border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a href="/index.html" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center font-display font-bold text-white shadow-md">
+            RL
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-display font-bold text-sm tracking-tight">REALLYFE COMMAND DESK</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider">Live Production</span>
+            </div>
+            <span class="text-[11px] text-slate-400">Jeff Oyeneye &bull; Executive Producer Console</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-4 text-xs">
+        <div class="hidden md:flex items-center gap-2 bg-slate-800/80 px-3 py-1.5 rounded-lg border border-slate-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-slate-300">Edge Gateway: <strong>Cloudflare Hono</strong></span>
+        </div>
+        <a href="/index.html" class="text-slate-300 hover:text-white transition-colors flex items-center gap-1">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          <span class="hidden sm:inline">View Public Network</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ADMIN MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-1">
+    
+    <!-- EXECUTIVE METRICS OVERVIEW CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+      <!-- CARD 1: VAULT MRR -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">The Vault MRR</span>
+          <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+            <i data-lucide="lock" class="w-4 h-4"></i>
+          </div>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-2xl sm:text-3xl font-display font-bold text-slate-900" id="stat-mrr">$53,446</span>
+          <span class="text-xs font-semibold text-emerald-600 flex items-center">+18.4%</span>
+        </div>
+        <span class="text-[11px] text-slate-500 mt-1 block">5,350 VIP Active Subscribers</span>
+      </div>
+
+      <!-- CARD 2: STUDIO INTERVIEW PIPELINE -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Sit-Down Bookings</span>
+          <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
+            <i data-lucide="video" class="w-4 h-4"></i>
+          </div>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-2xl sm:text-3xl font-display font-bold text-slate-900" id="stat-bookings">$22,500</span>
+          <span class="text-xs font-semibold text-emerald-600 flex items-center">9 Pending</span>
+        </div>
+        <span class="text-[11px] text-slate-500 mt-1 block">Dallas In-Studio ($2,500/session)</span>
+      </div>
+
+      <!-- CARD 3: MERCH DROP VOLUME -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Merch Gross Margin</span>
+          <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          </div>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-2xl sm:text-3xl font-display font-bold text-slate-900">76.8%</span>
+          <span class="text-xs font-semibold text-slate-500">Avg.</span>
+        </div>
+        <span class="text-[11px] text-slate-500 mt-1 block">46 Rebuilt SKUs &bull; Batch 001 Active</span>
+      </div>
+
+      <!-- CARD 4: AD INVENTORY CAPACITY -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Commercial Ads Fill</span>
+          <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="layout" class="w-4 h-4"></i>
+          </div>
+        </div>
+        <div class="mt-3 flex items-baseline gap-2">
+          <span class="text-2xl sm:text-3xl font-display font-bold text-slate-900">100%</span>
+          <span class="text-xs font-semibold text-emerald-600">4 / 4 Slots</span>
+        </div>
+        <span class="text-[11px] text-slate-500 mt-1 block">Dallas Justice Group Pinned Top</span>
+      </div>
+    </div>
+
+    <!-- TABS NAVIGATION -->
+    <div class="border-b border-slate-200 mb-6 flex items-center gap-6 text-sm font-semibold text-slate-600">
+      <button onclick="switchTab('inquiries')" id="tab-btn-inquiries" class="tab-link pb-3 text-blue-600 border-b-2 border-blue-600 flex items-center gap-2">
+        <i data-lucide="inbox" class="w-4 h-4"></i>
+        <span>Studio Bookings & Leads (<span id="inquiry-count-badge">4</span>)</span>
+      </button>
+      <button onclick="switchTab('ads')" id="tab-btn-ads" class="tab-link pb-3 hover:text-slate-900 flex items-center gap-2">
+        <i data-lucide="radio" class="w-4 h-4"></i>
+        <span>Commercial Ad Units</span>
+      </button>
+      <button onclick="switchTab('vault')" id="tab-btn-vault" class="tab-link pb-3 hover:text-slate-900 flex items-center gap-2">
+        <i data-lucide="shield-check" class="w-4 h-4"></i>
+        <span>VIP Vault Access Tokens</span>
+      </button>
+      <button onclick="switchTab('catalog')" id="tab-btn-catalog" class="tab-link pb-3 hover:text-slate-900 flex items-center gap-2">
+        <i data-lucide="layers" class="w-4 h-4"></i>
+        <span>Merchandise Inventory (46)</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: STUDIO BOOKINGS & INCOMING SPONSOR LEADS -->
+    <section id="tab-inquiries" class="tab-pane block space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+        <div class="p-5 border-b border-slate-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="font-display font-bold text-base text-slate-900">High-Ticket Studio Inquiries & Sponsorship Leads</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Direct leads captured via website commercial intake desk</p>
+          </div>
+          <button onclick="mockNewLead()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2 rounded-xl transition-all flex items-center gap-1.5 shadow-sm">
+            <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+            <span>Simulate Incoming Booking</span>
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 uppercase tracking-wider font-semibold">
+              <tr>
+                <th class="py-3 px-4">Client / Brand</th>
+                <th class="py-3 px-4">Package Requested</th>
+                <th class="py-3 px-4">Deal Value</th>
+                <th class="py-3 px-4">Contact Info</th>
+                <th class="py-3 px-4">Status</th>
+                <th class="py-3 px-4 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-tbody" class="divide-y divide-slate-100">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: COMMERCIAL AD UNITS MANAGER -->
+    <section id="tab-ads" class="tab-pane hidden space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h3 class="font-display font-bold text-base text-slate-900">Live Ad Slot Placements</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Real-time status of all monetized slots across the 6 network pages</p>
+          </div>
+          <span class="text-xs font-mono font-semibold px-3 py-1 bg-slate-100 rounded-lg text-slate-700">Estimated Monthly Impressions: 18.5M+</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="ads-container">
+          <!-- Injected via script -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: THE VAULT VIP SUBSCRIBERS & TOKEN GENERATOR -->
+    <section id="tab-vault" class="tab-pane hidden space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 class="font-display font-bold text-base text-slate-900">VIP Vault Membership Provisioning</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Generate manual VIP access passes or revoke expired subscriber keys</p>
+          </div>
+          <button onclick="generateManualToken()" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all flex items-center gap-1.5 shadow-sm">
+            <i data-lucide="key" class="w-3.5 h-3.5 text-amber-400"></i>
+            <span>Issue Comp VIP Pass</span>
+          </button>
+        </div>
+
+        <div id="recent-token-alert" class="hidden mb-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900">
+          <div class="flex items-center justify-between">
+            <span class="font-semibold">Pass Created:</span>
+            <span class="font-mono bg-white px-2 py-0.5 rounded border border-amber-300 font-bold" id="recent-token-code"></span>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 uppercase tracking-wider font-semibold">
+              <tr>
+                <th class="py-3 px-4">Member Name</th>
+                <th class="py-3 px-4">Email</th>
+                <th class="py-3 px-4">Membership Tier</th>
+                <th class="py-3 px-4">Vault Key Token</th>
+                <th class="py-3 px-4">Status</th>
+              </tr>
+            </thead>
+            <tbody id="vault-members-tbody" class="divide-y divide-slate-100">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MERCHANDISE SUPPLY & INVENTORY AUDIT -->
+    <section id="tab-catalog" class="tab-pane hidden space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <h3 class="font-display font-bold text-base text-slate-900">Apparel Production & Sizing Audit</h3>
+            <p class="text-xs text-slate-500 mt-0.5">46 items preserved from original Shopify catalog with high-margin cut & sew pricing</p>
+          </div>
+          <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">
+            Fulfillment: Dallas Cut & Sew
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 uppercase tracking-wider font-semibold">
+              <tr>
+                <th class="py-3 px-4">Product Name</th>
+                <th class="py-3 px-4">Category</th>
+                <th class="py-3 px-4">Retail Price</th>
+                <th class="py-3 px-4">Production Cost</th>
+                <th class="py-3 px-4">Gross Margin</th>
+                <th class="py-3 px-4">Sizes Active</th>
+              </tr>
+            </thead>
+            <tbody id="catalog-summary-tbody" class="divide-y divide-slate-100">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      RealLyfe Productions LLC &bull; Executive Command Console &bull; Engineered by RJ Business Solutions
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    let inquiries = [
+      {
+        id: 'inq-101',
+        brand: 'Dallas Justice Defense Group',
+        contact: 'Attorney Marcus Vance',
+        phone: '214-555-8783',
+        email: 'mvance@dallasjustice.com',
+        package: 'Top Leaderboard 6-Month Sponsorship',
+        budget: '$9,000',
+        status: 'Active / Paid',
+        date: '2026-10-15'
+      },
+      {
+        id: 'inq-102',
+        brand: 'Southside Streetwear Co.',
+        contact: 'Damian Cole',
+        phone: '972-555-0144',
+        email: 'cole@southsidecut.com',
+        package: 'RealLyfe In-Studio Sit-Down ($2,500)',
+        budget: '$2,500',
+        status: 'Scheduled (Nov 2)',
+        date: '2026-10-16'
+      },
+      {
+        id: 'inq-103',
+        brand: 'Oak Cliff Motors',
+        contact: 'Terry Rodriguez',
+        phone: '214-555-0812',
+        email: 'terry@oakcliffmotors.com',
+        package: '3-Part Documentary Title Sponsor',
+        budget: '$5,000',
+        status: 'Reviewing Contract',
+        date: '2026-10-17'
+      },
+      {
+        id: 'inq-104',
+        brand: 'Trap Legends Podcast',
+        contact: 'Malik Henderson',
+        phone: '817-555-4392',
+        email: 'malik@traplegends.fm',
+        package: 'RealLyfe In-Studio Sit-Down ($2,500)',
+        budget: '$2,500',
+        status: 'Pending Deposit',
+        date: '2026-10-17'
+      }
+    ];
+
+    let vaultMembers = [
+      { name: 'DeMarcus Jackson', email: 'd.jackson@dallasmail.com', tier: 'Annual VIP ($99/yr)', token: 'vlt_ann_98f12a_1792', status: 'Active' },
+      { name: 'Kendra Washington', email: 'kendra.w@houstonnet.com', tier: 'Monthly VIP ($9.99/mo)', token: 'vlt_mth_41c09b_1791', status: 'Active' },
+      { name: 'Carlos Mendez', email: 'cmendez@fortworth.org', tier: 'Monthly VIP ($9.99/mo)', token: 'vlt_mth_87e21a_1790', status: 'Active' },
+      { name: 'Tavon Green', email: 'tavon@oakcliff.com', tier: 'The Banned Trilogy Box ($29.99)', token: 'vlt_box_12a77e_1789', status: 'Lifetime Access' }
+    ];
+
+    async function initDashboard() {
+      renderInquiries();
+      await loadAds();
+      renderVaultMembers();
+      await loadCatalogSummary();
+      lucide.createIcons();
+    }
+
+    function renderInquiries() {
+      const tbody = document.getElementById('inquiries-tbody');
+      document.getElementById('inquiry-count-badge').textContent = inquiries.length;
+
+      tbody.innerHTML = inquiries.map(item => `
+        <tr class="hover:bg-slate-50 transition-colors">
+          <td class="py-3.5 px-4">
+            <strong class="text-slate-900 block font-semibold">${item.brand}</strong>
+            <span class="text-slate-500">${item.contact}</span>
+          </td>
+          <td class="py-3.5 px-4 text-slate-700">${item.package}</td>
+          <td class="py-3.5 px-4 font-display font-bold text-blue-600">${item.budget}</td>
+          <td class="py-3.5 px-4">
+            <span class="block">${item.email}</span>
+            <span class="text-slate-500">${item.phone}</span>
+          </td>
+          <td class="py-3.5 px-4">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
+              item.status.includes('Paid') || item.status.includes('Active')
+                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                : 'bg-amber-50 text-amber-700 border border-amber-200'
+            }">
+              ${item.status}
+            </span>
+          </td>
+          <td class="py-3.5 px-4 text-right">
+            <button onclick="approveBooking('${item.id}')" class="bg-blue-50 hover:bg-blue-100 text-blue-600 font-semibold px-2.5 py-1 rounded-lg text-[11px] transition-colors">
+              Manage
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function loadAds() {
+      try {
+        const res = await fetch('/data/ads.json');
+        const data = await res.json();
+        const container = document.getElementById('ads-container');
+
+        container.innerHTML = data.ad_units.map(ad => `
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-800 px-2 py-0.5 rounded">
+                  ${ad.slot}
+                </span>
+                <span class="text-xs font-semibold text-emerald-600 flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Live Placed
+                </span>
+              </div>
+              <h4 class="font-display font-bold text-slate-900 text-sm">${ad.sponsor}</h4>
+              <p class="text-xs text-slate-600 mt-1">${ad.headline}</p>
+              <p class="text-[11px] text-slate-500 mt-1 italic">${ad.tagline}</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs">
+              <span class="text-slate-500 font-mono">CTA: <strong>${ad.cta}</strong></span>
+              <a href="${ad.url}" target="_blank" class="text-blue-600 font-semibold hover:underline">Target URL</a>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        console.error('Failed to load ads in admin:', err);
+      }
+    }
+
+    function renderVaultMembers() {
+      const tbody = document.getElementById('vault-members-tbody');
+      tbody.innerHTML = vaultMembers.map(m => `
+        <tr class="hover:bg-slate-50">
+          <td class="py-3 px-4 font-semibold text-slate-900">${m.name}</td>
+          <td class="py-3 px-4 text-slate-600">${m.email}</td>
+          <td class="py-3 px-4 text-slate-700">${m.tier}</td>
+          <td class="py-3 px-4 font-mono text-[11px] text-blue-600">${m.token}</td>
+          <td class="py-3 px-4">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200">
+              ${m.status}
+            </span>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function loadCatalogSummary() {
+      try {
+        const res = await fetch('/data/catalog.json');
+        const items = await res.json();
+        const tbody = document.getElementById('catalog-summary-tbody');
+
+        tbody.innerHTML = items.slice(0, 10).map(p => {
+          const retail = Number(p.price_min) || 49.99;
+          const cost = (retail * 0.22).toFixed(2);
+          const margin = (((retail - cost) / retail) * 100).toFixed(1);
+
+          return `
+            <tr class="hover:bg-slate-50">
+              <td class="py-3 px-4 font-semibold text-slate-900 max-w-xs truncate">${p.title}</td>
+              <td class="py-3 px-4 text-slate-600">${p.product_type || 'Merch'}</td>
+              <td class="py-3 px-4 font-bold text-slate-900">$${retail.toFixed(2)}</td>
+              <td class="py-3 px-4 text-slate-500">$${cost}</td>
+              <td class="py-3 px-4 font-bold text-emerald-600">${margin}%</td>
+              <td class="py-3 px-4 text-slate-700">S, M, L, XL, 2XL</td>
+            </tr>
+          `;
+        }).join('');
+      } catch (err) {
+        console.error('Failed to load catalog summary:', err);
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-link').forEach(el => {
+        el.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+        el.classList.add('text-slate-600');
+      });
+
+      document.getElementById('tab-' + tabId).classList.remove('hidden');
+      const activeBtn = document.getElementById('tab-btn-' + tabId);
+      activeBtn.classList.remove('text-slate-600');
+      activeBtn.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+      lucide.createIcons();
+    }
+
+    function mockNewLead() {
+      const names = ['Jordan Henderson', 'Kip Malone', 'Dallas Wave Records'];
+      const pick = names[Math.floor(Math.random() * names.length)];
+      const newLead = {
+        id: 'inq-' + Math.floor(Math.random() * 900 + 100),
+        brand: pick,
+        contact: 'Manager / Lead Contact',
+        phone: '214-555-' + Math.floor(Math.random() * 9000 + 1000),
+        email: 'info@' + pick.toLowerCase().replace(/[^a-z]/g, '') + '.com',
+        package: 'RealLyfe In-Studio Sit-Down ($2,500)',
+        budget: '$2,500',
+        status: 'New Intake Lead',
+        date: 'Just Now'
+      };
+      inquiries.unshift(newLead);
+      renderInquiries();
+      lucide.createIcons();
+      alert('🔔 New $2,500 In-Studio Sit-Down lead registered to RealLyfe intake desk!');
+    }
+
+    function generateManualToken() {
+      const token = 'vlt_vip_' + Math.random().toString(36).substring(2, 8) + '_' + Date.now().toString().slice(-4);
+      document.getElementById('recent-token-code').textContent = token;
+      document.getElementById('recent-token-alert').classList.remove('hidden');
+      vaultMembers.unshift({
+        name: 'VIP Guest / Media Partner',
+        email: 'guest@reallyfestreetstarz.com',
+        tier: 'Complimentary VIP All-Access',
+        token: token,
+        status: 'Active'
+      });
+      renderVaultMembers();
+    }
+
+    function approveBooking(id) {
+      const inq = inquiries.find(x => x.id === id);
+      if (inq) {
+        alert(`Opening executive dispatch file for ${inq.brand} (${inq.package} - ${inq.budget})`);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', initDashboard);
+  </script>
+</body>
+</html>

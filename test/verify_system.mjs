@@ -130,7 +130,8 @@ test('🏛️ Verification 5: Multi-Page Architecture & Commercial Ad Units', ()
     'public/vault.html',
     'public/store.html',
     'public/sponsors.html',
-    'public/about.html'
+    'public/about.html',
+    'public/admin.html'
   ];
 
   for (const page of pages) {
@@ -138,7 +139,7 @@ test('🏛️ Verification 5: Multi-Page Architecture & Commercial Ad Units', ()
     assert.ok(fs.existsSync(fullPath), `Page exists: ${page}`);
     const content = fs.readFileSync(fullPath, 'utf8');
     assert.ok(content.length > 3000, `Page ${page} has substantial production content (${content.length} chars)`);
-    assert.ok(content.includes('Dallas Justice Defense Group') || content.includes('RealLyfe'), `Page ${page} includes brand/sponsor content`);
+    assert.ok(content.includes('Dallas Justice Defense Group') || content.includes('RealLyfe') || content.includes('Oyeneye'), `Page ${page} includes brand/sponsor content`);
   }
 
   // Verify ads configuration file
@@ -147,5 +148,5 @@ test('🏛️ Verification 5: Multi-Page Architecture & Commercial Ad Units', ()
   const adsData = JSON.parse(fs.readFileSync(adsPath, 'utf8'));
   assert.ok(adsData.ad_units.length >= 4, 'At least 4 active ad units configured');
 
-  console.log(`  ✓ Verified all 6 multi-page routes and ${adsData.ad_units.length} active monetization ad units`);
+  console.log(`  ✓ Verified all 7 multi-page routes and ${adsData.ad_units.length} active monetization ad units`);
 });
